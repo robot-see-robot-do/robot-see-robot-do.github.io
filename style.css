@@ -102,9 +102,10 @@ display: none;
 
 .author-text {
     font-family: 'Open Sans',sans-serif;
-    color: #333;
+    color: #488af3;
     font-size: 16px;
     font-weight: 400;
+    text-decoration: none;
 }
 
 .text-star {
