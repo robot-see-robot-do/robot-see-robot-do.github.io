@@ -63,6 +63,5 @@ function initializePage() {
     showIframe(iframeIds[0]);
   }
 }
-
 // Run initialization when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', initializePage);

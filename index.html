@@ -83,7 +83,7 @@
                         Brent Yi
                     </a>
                     <div style="width: 1.25em; display: inline-block"></div>
-                    <a href="https://github.com/brentyi" target="_blank" class="author-text">
+                    <a href="https://qianqianwang68.github.io/" target="_blank" class="author-text">
                         Qianqian Wang
                     </a>
                     <div style="width: 1.25em; display: inline-block"></div>
@@ -102,7 +102,7 @@
         </div>
         <!-- Submission status -->
         <div class="title-row">
-            <h2 class="subheader">CoRL 2024</h1>
+            <h2 class="subheader">CoRL 2024 (Oral)</h1>
         </div>
 
         <!-- Paper / code / data URLs -->
@@ -143,22 +143,26 @@
 
         <!-- TL;DR + Teaser video -->
         <div class="section base-row add-top-padding">
-            <h1 class="tldr">
-                <b>TL;DR</b>:
-                4D reconstruct moving object parts from a monocular video using a scanned object model and imitate part motion with a robot
-            </h1>
             <video id="main-video" autobuffer muted autoplay loop controls>
-                <source id="mp4" src="data/teaser.mp4" type="video/mp4">
+                <source id="mp4" src="data/demo_vids/buddha_empty_close.mp4" type="video/mp4">
             </video>
         </div>
 
         <div class="section base-row add-top-padding">
-            <h1 id="abstract">Overview</h1>
+            <h1 class="tldr">
+                <b>TL;DR</b>:
+                Robot See Robot Do uses a <b>4D</b> <b>D</b>ifferentiable <b>P</b>art <b>M</b>odel (4D-DPM) to reconstruct moving object parts from a monocular video using a scanned object model, then imitates
+                these part motions with a robot.
+            </h1>
+            <img src="data/rsrd_mainfig.jpg" style="max-width: 100%" />
+            <h1>4D Part Reconstruction</h1>
             <p class="paragraph">
-                TODO
+                RSRD takes in <b>1) </b>a multi-view object scan and <b>2)</b> a monocular demonstration video.
+                These smartphone-captured inputs are used to generate these 4D reconstructions (Visualizations using <a href="https://viser.studio/latest/" target="_blank">Viser</a>): 
             </p>
+            
             <h1 class="tldr"><b>
-                Click the thumbnails below to load scenes, see groupings at different scales.
+                Interact with me!
             </b></h1>
             <div id="main-results">
                 <div id="iframe-container" class="iframe-container">
@@ -228,25 +232,95 @@
                     </button>
                 </div>
             </div> 
+            <h1 class="tldr"><b>Input demonstration videos
+            </b></h1>
+            <div class="video-carousel-wrapper">
+                <div class="carousel-container" id="videoCarousel">
+                    <!-- Add your video elements here -->
+                    <div class="carousel-item">
+                        <video autoplay muted loop>
+                            <source src="data/demo_vids/cal_bear_naked_wave.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-item">
+                        <video autoplay muted loop>
+                            <source src="data/demo_vids/nerfgun_final.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-item">
+                        <video autoplay muted loop>
+                            <source src="data/demo_vids/buddha_empty_close.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-item">
+                        <video autoplay muted loop>
+                            <source src="data/demo_vids/scissors2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-item">
+                        <video autoplay muted loop>
+                            <source src="data/demo_vids/sunglasses_fold.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-item">
+                        <video autoplay muted loop>
+                            <source src="data/demo_vids/led_light_unfold3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-item">
+                        <video autoplay muted loop>
+                            <source src="data/demo_vids/stapler_fold.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-item">
+                        <video autoplay muted loop>
+                            <source src="data/demo_vids/wire_cutters_close2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-item">
+                        <video autoplay muted loop>
+                            <source src="data/demo_vids/usb_plug_unplug3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
         </div>
 
+        
+
         <!-- Just for vertical spacing... -->
-        <div class="section add-top-padding">
+        <!-- <div class="section add-top-padding">
             <div class="base-row">
                 <img src="data/favicon.png" style="height: 20px; margin-left: 5px; margin-right: 5px; margin-top: 40px; margin-bottom: 20px;">
                 <img src="data/favicon.png" style="height: 20px; margin-left: 5px; margin-right: 5px; margin-top: 40px; margin-bottom: 20px;">
                 <img src="data/favicon.png" style="height: 20px; margin-left: 5px; margin-right: 5px; margin-top: 40px; margin-bottom: 20px;">
             </div>
-         </div>
+         </div> -->
 
 
 
         <div class="section base-row add-top-padding">
-            <h1>Approach</h1>
+            <h1>Robot Demonstration Re-Mapping</h1>
             <p class="paragraph">
-                TODO
+                After recovering 3D part motion, RSRD plans grasps and robot motions to reproduce the 4D reconstructions
             </p>
-            <!-- <img src="data/garfield_training.jpg" style="max-width: 100%" /> -->
+            <div class="video-container">
+                <div class="video-item">
+                    <video autoplay muted loop>
+                        <source src="data/bear_mp_crop.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <video autoplay muted loop>
+                        <source src="data/nerfgun_mp_crop.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <p class="paragraph">
+                These motions can be executed on a real robot to reproduce the demonstrated motion
+            </p>
         </div>
 
         <!-- Just for vertical spacing... -->
@@ -263,7 +337,7 @@
             <p class="paragraph"> If you use this work or find it helpful, please consider citing: (bibtex) </p>
             <pre id="codecell0">@inproceedings{kerr2024rsrd,
 &nbsp;title={Robot See Robot Do: Imitating Articulated Object Manipulation with Monocular 4D Reconstruction},
-&nbsp;author={Justin Kerr and Chung Min Kim and Mingxuan Wu and Brent Yi and Qianqian Wang and Angjoo Kanazawa and Ken Goldberg},
+&nbsp;author={Justin Kerr and Chung Min Kim and Mingxuan Wu and Brent Yi and Qianqian Wang and Ken Goldberg and Angjoo Kanazawa},
 &nbsp;booktitle={8th Annual Conference on Robot Learning},
 &nbsp;year={2024},
 &nbsp;url={https://openreview.net/forum?id=2LLu3gavF1}
@@ -273,46 +347,11 @@
         <footer>
             <div class="section" style="margin-top: 40px;">
                 <p class="paragraph">
-                    The website template is from the <a href="https://www.garfield.studio">GARField</a>
-                    project page, and the video comparison tool uses elements from <a href="https://brentyi.github.io/tilted/">TILTED</a> page.
+                    The website template is adapted from the <a href="https://www.garfield.studio">GARField</a>
+                    project page.
                 </p>
             </div>
         </footer>
     </div>
-
-    <!-- Video references for main results... -->
-    <video id="bouquet" controls="false" loop autoplay muted class="videos" webkit-playsinline playsinline>
-        <source src="data/renders/bouquet/concat.webm" type="video/webm">
-        <source src="data/renders/bouquet/concat.mp4" type="video/mp4">
-    </video>
-    <video id="donuts" controls="false" loop autoplay muted class="videos" webkit-playsinline playsinline>
-        <source src="data/renders/donuts/concat.webm" type="video/webm">
-        <source src="data/renders/donuts/concat.mp4" type="video/mp4">
-    </video>
-    <video id="dozer" controls="false" loop autoplay muted class="videos" webkit-playsinline playsinline>
-        <source src="data/renders/dozer/concat.webm" type="video/webm">
-        <source src="data/renders/dozer/concat.mp4" type="video/mp4">
-    </video>
-    <video id="keyboard" controls="false" loop autoplay muted class="videos" webkit-playsinline playsinline>
-        <source src="data/renders/keyboard/concat.webm" type="video/webm">
-        <source src="data/renders/keyboard/concat.mp4" type="video/mp4">
-    </video>
-    <video id="louvre" controls="false" loop autoplay muted class="videos" webkit-playsinline playsinline>
-        <source src="data/renders/louvre/concat.webm" type="video/webm">
-        <source src="data/renders/louvre/concat.mp4" type="video/mp4">
-    </video>
-    <video id="succulent" controls="false" loop autoplay muted class="videos" webkit-playsinline playsinline>
-        <source src="data/renders/succulent/concat.webm" type="video/webm">
-        <source src="data/renders/succulent/concat.mp4" type="video/mp4">
-    </video>
-    <video id="cafe" controls="false" loop autoplay muted class="videos" webkit-playsinline playsinline>
-        <source src="data/renders/nyc_cafe/concat.webm" type="video/webm">
-        <source src="data/renders/nyc_cafe/concat.mp4" type="video/mp4">
-    </video>
-    <video id="table" controls="false" loop autoplay muted class="videos" webkit-playsinline playsinline>
-        <source src="data/renders/table/concat.webm" type="video/webm">
-        <source src="data/renders/table/concat.mp4" type="video/mp4">
-    </video>
-
 
 </body>
