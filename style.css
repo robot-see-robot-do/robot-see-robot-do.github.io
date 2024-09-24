@@ -247,7 +247,14 @@ display: none;
     margin-bottom: 10px;
     margin-left: 20px;
 }
-
+.separator {
+    display: block !important;
+    height: 1px !important;
+    width: 100% !important;
+    /* margin: 1em 0 !important;
+    background-color: #eee !important;
+    clear: both !important; */
+  }
 #why-lerf{
     padding-top: 10px;
     margin-top: 10px;
