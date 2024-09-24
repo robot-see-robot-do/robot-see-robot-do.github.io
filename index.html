@@ -158,11 +158,11 @@
             <h1>4D Part Reconstruction</h1>
             <p class="paragraph">
                 RSRD takes in <b>1) </b>a multi-view object scan and <b>2)</b> a monocular demonstration video.
-                These smartphone-captured inputs are used to generate these 4D reconstructions (Visualizations using <a href="https://viser.studio/latest/" target="_blank">Viser</a>): 
+                These smartphone-captured inputs are used to generate these 4D reconstructions: 
             </p>
             
             <h1 class="tldr"><b>
-                Interact with me!
+                <img src="data/drag_icon.png" alt="" class="inline-image">Pan around in 3D!<img src="data/drag_icon.png" alt="" class="inline-image">
             </b></h1>
             <div id="main-results">
                 <div id="iframe-container" class="iframe-container">
@@ -232,6 +232,7 @@
                     </button>
                 </div>
             </div> 
+            <p class="paragraph">If you think these animations are cool, check out <a href="https://viser.studio/latest/" target="_blank">Viser</a>!</p>
             <h1 class="tldr"><b>Input demonstration videos
             </b></h1>
             <div class="video-carousel-wrapper">
@@ -306,7 +307,7 @@
                 </div>
             </div>
             <p class="paragraph">
-                These motions can be executed on a real robot to reproduce the demonstrated motion:
+                These can be physically executed on a real robot to produce the demonstrated motion:
             </p>
             <div class="video-container">
                 <div class="video-item">
@@ -351,6 +352,23 @@
                 <img src="data/favicon.png" style="height: 20px; margin-left: 5px; margin-right: 5px; margin-top: 40px; margin-bottom: 40px;">
             </div>
          </div>
+         <div class="section base-row add-top-padding">
+            <h1>4D Differentiable Part Models</h1>
+            <p class="paragraph">
+                RSRD uses <a href="https://www.garfield.studio/" target="_blank">GARField</a> to decompose objects into parts, and trains part-centric feature fields
+                on top of these. Each part is assigned a trainable 6D pose parameter which is optimized with gradient descent.
+                DINO improves dramatically over photometric tracking as a more robust feature target, and allows reconstructing a broad range of open-world objects.
+                
+            </p>
+            <img src="data/4ddpm_fig.jpg" style="max-width: 100%; padding-bottom: 30px" />
+            <p class="paragraph">
+                Because 4D-DPM uses gradient descent, any differentiable prior is easily incorporated like temporal smoothness and rigidity.
+            </p>
+            <img src="data/4ddpm_ablation.jpg" style="max-width: 90%" />
+
+            <h1>Limitations</h1>
+         </div>
+
 
         <div class="section citation add-top-padding">
             <h1 id="abstract">Citation </h1>

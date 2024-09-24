@@ -1,8 +1,6 @@
 $(() => {
   $(".results-slide-row").each((switcher_index, switcher) => {
     const $switcher = $(switcher);
-    console.log($switcher);
-    console.log($switcher.children());
 
     $switcher.children().each((switcher_child_index, child) => {
       const $child = $(child);

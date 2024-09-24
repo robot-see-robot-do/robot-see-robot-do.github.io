@@ -502,6 +502,13 @@ display: none;
     text-align: center;
     box-shadow: 0em 0.1em 0.5em rgba(0, 0, 0, 0.1);
   }
+  .inline-image {
+    display: inline-block;
+    vertical-align: top;
+    height: 1em;  /* This makes the image height match the text */
+    width: auto;  /* Maintain aspect ratio */
+    margin: 5px;  /* Add some space around the image */
+}
   .image-compare-handle::before {
     /* Centered line! */
     box-shadow: 0.1em 0.1em 0.5em rgba(0, 0, 0, 0.4);
