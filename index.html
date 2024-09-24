@@ -60,7 +60,7 @@
             <h1 class="title">
                 Robot See 👁️ Robot Do 🦾
             </h1>
-            <h1 class="subheader">🚧site under construction🚧</h1>
+            <!-- <h1 class="subheader">🚧site under construction🚧</h1> -->
             <h1 class="subheader">Imitating Articulated Object Manipulation with Monocular 4D Reconstruction</h1>
             <!-- Author list -->
             <div class="base-row">
@@ -143,22 +143,23 @@
 
         <!-- TL;DR + Teaser video -->
         <div class="section base-row add-top-padding">
+            <h1 class="tldr">
+                <b>TL;DR</b>:
+                Robot See Robot Do uses a <b>4D</b> <b>D</b>ifferentiable <b>P</b>art <b>M</b>odel (4D-DPM) to reconstruct moving object parts from a monocular video using a scanned object model, then imitates
+                these part motions with a robot.
+            </h1>
             <video id="main-video" autobuffer muted autoplay loop controls>
                 <source id="mp4" src="data/demo_vids/buddha_empty_close.mp4" type="video/mp4">
             </video>
         </div>
 
         <div class="section base-row add-top-padding">
-            <h1 class="tldr">
-                <b>TL;DR</b>:
-                Robot See Robot Do uses a <b>4D</b> <b>D</b>ifferentiable <b>P</b>art <b>M</b>odel (4D-DPM) to reconstruct moving object parts from a monocular video using a scanned object model, then imitates
-                these part motions with a robot.
-            </h1>
-            <img src="data/rsrd_mainfig.jpg" style="max-width: 100%" />
+            
             <h1 class="tldr">
                 Humans imitate manipulation by watching <b>object</b> motion, not <b>hand</b> motion. RSRD does the same. <br>
                 This enables imitation from a single video robust to orientation and across morphologies
             </h1>
+            <img src="data/rsrd_mainfig.jpg" style="max-width: 100%" />
             <h1>4D Part Reconstruction</h1>
             <p class="paragraph">
                 RSRD takes in <b>1) </b>a multi-view object scan and <b>2)</b> a monocular demonstration video.
@@ -396,7 +397,7 @@
         <footer>
             <div class="section" style="margin-top: 40px;">
                 <p class="paragraph">
-                    The website template is adapted from the <a href="https://www.garfield.studio">GARField</a>
+                    The website template is adapted from the <a class="author-text" href="https://www.garfield.studio">GARField</a>
                     project page.
                 </p>
             </div>
