@@ -155,6 +155,9 @@
                 these part motions with a robot.
             </h1>
             <img src="data/rsrd_mainfig.jpg" style="max-width: 100%" />
+            <h1 class="tldr">
+                Humans can imitate manipulation by watching <b>object</b> motion, not <b>hand</b> motion. RSRD does the same.
+            </h1>
             <h1>4D Part Reconstruction</h1>
             <p class="paragraph">
                 RSRD takes in <b>1) </b>a multi-view object scan and <b>2)</b> a monocular demonstration video.
@@ -162,7 +165,7 @@
             </p>
             
             <h1 class="tldr"><b>
-                <img src="data/drag_icon.png" alt="" class="inline-image">Pan around in 3D!<img src="data/drag_icon.png" alt="" class="inline-image">
+                <img src="data/drag_icon.png" alt="" class="inline-image">Click and drag me!<img src="data/drag_icon.png" alt="" class="inline-image">
             </b></h1>
             <div id="main-results">
                 <div id="iframe-container" class="iframe-container">
@@ -232,7 +235,7 @@
                     </button>
                 </div>
             </div> 
-            <p class="paragraph">If you think these animations are cool, check out <a href="https://viser.studio/latest/" target="_blank">Viser</a>!</p>
+            <p class="tldr">If you think these animations are cool, check out <a href="https://viser.studio/latest/" class="author-text" target="_blank">Viser</a>!</p>
             <div class="separator"></div>
             <h1 class="tldr"><b>Input demonstration videos</b></h1>
             <div class="video-carousel-wrapper">
@@ -357,7 +360,7 @@
             <div class="separator"></div>
             <p class="tldr"><b>4D Differentiable Part Models</b></p>
             <p class="paragraph">
-                RSRD uses <a href="https://www.garfield.studio/" target="_blank">GARField</a> to decompose objects into parts, and trains part-centric feature fields
+                4D-DPM decomposes objects into parts with <a href="https://www.garfield.studio/" class="author-text" target="_blank">GARField</a>, and trains part-centric feature fields
                 on top of these. Each part is assigned a trainable 6D pose parameter which is optimized with gradient descent.
                 DINO improves dramatically over photometric tracking as a more robust feature target, and allows reconstructing a broad range of open-world objects.
                 
@@ -370,7 +373,7 @@
 
             <p class="tldr"><b>Robot Execution</b></p>
             <div class="separator"></div>
-            <p class='paragraph'>RSRD detects human hands with <a href="https://geopavlakos.github.io/hamer/">HaMeR</a> 
+            <p class='paragraph'>RSRD detects human hands with <a class="author-text" href="https://geopavlakos.github.io/hamer/">HaMeR</a> 
                 and aligns them with the 4D reconstruction. Importantly, RSRD only uses hands as a <b>soft cue</b> to
                  bias grasp planning towards parts touched by the human, and can deviate from this if kinematically required.</p>
             <img src="data/rsrd_hands.jpg" style="max-width: 90%" />
