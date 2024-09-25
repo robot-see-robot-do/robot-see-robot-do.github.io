@@ -376,7 +376,6 @@
                 4D-DPM decomposes objects into parts with <a href="https://www.garfield.studio/" class="author-text" target="_blank">GARField</a>, and trains part-centric feature fields
                 on top of these. Each part is assigned a trainable 6D pose parameter which is optimized with gradient descent.
                 DINO improves dramatically over photometric tracking as a more robust feature target, and allows reconstructing a broad range of open-world objects.
-                
             </p>
             <img src="data/4ddpm_fig.jpg" style="max-width: 100%; padding-bottom: 30px" />
             <p class="paragraph">
@@ -390,7 +389,30 @@
                 and aligns them with the 4D reconstruction. RSRD only uses hands as a <b>soft cue</b> to
                  bias grasp planning towards parts touched by the human, and can deviate from this if kinematically required.</p>
             <img src="data/rsrd_hands.jpg" style="max-width: 90%" />
-            <p class="paragraph">RSRD plans bimanual motions to grasp and manipulate parts in a pose-agnostic way, allowing it to adapt to any kinematically</p>
+            <p class="paragraph">RSRD plans in a pose-agnostic way, allowing it to adapt to:</p>
+            <div class="video-container">
+                <div class="video-item">
+                    <p><b>Varying grasp candidates</b></p>
+                    <video autoplay muted loop playsinline>
+                        <source src="data/nerfgun_graspsearch.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <p><b>Varying object pose</b></p>
+                    <video autoplay muted loop playsinline>
+                        <source src="data/nerfgun_posevary.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <p><b>Varying object pose</b></p>
+                    <video autoplay muted loop playsinline>
+                        <source src="data/bear_posevary.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
          </div>
 
 
