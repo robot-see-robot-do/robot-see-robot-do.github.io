@@ -48,7 +48,6 @@ body {
     margin: 0 auto;
     overflow-x: auto;
     white-space: nowrap;
-    padding: 20px 0;
 }
 .carousel-container .carousel-item video {
     width: 320px;
@@ -60,7 +59,35 @@ body {
     display: inline-block;
     margin-right: 20px;
 }
+.carousel-item.show {
+    display: block;
+  }
+  
+.carousel-item:not(.show) {
+display: none;
+}
+.click-and-move-overlay {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    pointer-events: none; /* Allows clicking through to the iframe */
+    text-align: center; /* Centers the text horizontally */
+}
 
+.click-and-move-overlay .tldr {
+    margin: 0;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    border-radius: 5px;
+    font-size: 14px; /* Adjust as needed */
+}
+
+.click-and-move-overlay .inline-image {
+    height: 20px;
+    vertical-align: middle;
+}
 
 /* New styles for centering and consistency */
 .video-carousel-wrapper {
@@ -80,8 +107,11 @@ body {
 
 .iframe-container {
     position: relative;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1); /* Uniform shadow in all directions */
     padding-bottom: 70%; /* 16:9 Aspect Ratio */
+    border-radius: 20px;
     height: 0;
+    width: 90%;
     overflow: hidden;
     margin: 10px auto; /* Center the container and add vertical space */
 }

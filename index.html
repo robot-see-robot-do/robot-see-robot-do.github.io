@@ -75,7 +75,7 @@
                         Chung Min Kim
                     </a>
                     <div style="width: 1.25em; display: inline-block"></div>
-                    <a href="https://github.com/WMXwmxwalter" target="_blank" class="author-text">
+                    <a href="https://mingxuan-w.github.io/website/" target="_blank" class="author-text">
                         Mingxuan Wu
                     </a>
                     <div style="width: 1.25em; display: inline-block"></div>
@@ -166,11 +166,73 @@
                 These smartphone-captured inputs are used to generate these 4D reconstructions: 
             </p>
             
-            <h1 class="tldr"><b>
-                <img src="data/drag_icon.png" alt="" class="inline-image">Click and move me!<img src="data/drag_icon.png" alt="" class="inline-image">
-            </b></h1>
+            
             <div id="main-results">
+                <h1 class="tldr"><b>Input demonstration video</b></h1>
+            <div class="video-carousel-wrapper">
+                <div class="carousel-container" id="videoCarousel">
+                    <!-- Add your video elements here -->
+                    <div class="carousel-item" id="bear_video">
+                        <video autoplay muted loop playsinline>
+                            <source src="data/demo_vids/cal_bear_naked_wave.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-item" id="nerfgun_video">
+                        <video autoplay muted loop playsinline>
+                            <source src="data/demo_vids/nerfgun_final.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-item" id="redbox_video">
+                        <video autoplay muted loop playsinline>
+                            <source src="data/demo_vids/buddha_empty_close.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-item" id="scissors_video">
+                        <video autoplay muted loop playsinline>
+                            <source src="data/demo_vids/scissors2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-item" id="sunglasses_video">
+                        <video autoplay muted loop playsinline>
+                            <source src="data/demo_vids/sunglasses_fold.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-item" id="ledlight_video">
+                        <video autoplay muted loop playsinline>
+                            <source src="data/demo_vids/led_light_unfold3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-item" id="stapler_video">
+                        <video autoplay muted loop playsinline>
+                            <source src="data/demo_vids/stapler_fold.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-item" id="wirecutters_video">
+                        <video autoplay muted loop playsinline>
+                            <source src="data/demo_vids/wire_cutters_close2.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="carousel-item" id="usbplug_video">
+                        <video autoplay muted loop playsinline>
+                            <source src="data/demo_vids/usb_plug_unplug3.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </div>
+            <!-- <h1 class="tldr"><b>
+                <img src="data/drag_icon.png" alt="" class="inline-image">Click and move me!<img src="data/drag_icon.png" alt="" class="inline-image">
+            </b></h1> -->
+            
                 <div id="iframe-container" class="iframe-container">
+                    <div class="click-and-move-overlay">
+                        <h1 class="tldr">
+                            <b>
+                                <img src="data/drag_icon.png" alt="" class="inline-image">
+                                Click and move me!
+                                <img src="data/drag_icon.png" alt="" class="inline-image">
+                            </b>
+                        </h1>
+                    </div>
                     <iframe
                         id="bear"
                         class = "iframe"
@@ -237,59 +299,8 @@
                     </button>
                 </div>
             </div> 
-            <p class="tldr"> These 4D gaussian splat animations are rendered in-browser! If you think that's cool, check out <a href="https://viser.studio/latest/" class="author-text" target="_blank">Viser</a>!</p>
-            <div class="separator"></div>
-            <h1 class="tldr"><b>Input demonstration videos</b></h1>
-            <div class="video-carousel-wrapper">
-                <div class="carousel-container" id="videoCarousel">
-                    <!-- Add your video elements here -->
-                    <div class="carousel-item">
-                        <video autoplay muted loop playsinline>
-                            <source src="data/demo_vids/cal_bear_naked_wave.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="carousel-item">
-                        <video autoplay muted loop playsinline>
-                            <source src="data/demo_vids/nerfgun_final.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="carousel-item">
-                        <video autoplay muted loop playsinline>
-                            <source src="data/demo_vids/buddha_empty_close.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="carousel-item">
-                        <video autoplay muted loop playsinline>
-                            <source src="data/demo_vids/scissors2.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="carousel-item">
-                        <video autoplay muted loop playsinline>
-                            <source src="data/demo_vids/sunglasses_fold.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="carousel-item">
-                        <video autoplay muted loop playsinline>
-                            <source src="data/demo_vids/led_light_unfold3.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="carousel-item">
-                        <video autoplay muted loop playsinline>
-                            <source src="data/demo_vids/stapler_fold.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="carousel-item">
-                        <video autoplay muted loop playsinline>
-                            <source src="data/demo_vids/wire_cutters_close2.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="carousel-item">
-                        <video autoplay muted loop playsinline>
-                            <source src="data/demo_vids/usb_plug_unplug3.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-            </div>
+            <p class="tldr">These 4D gaussian splat animations are rendered in-browser! If you think that's cool, check out <a href="https://viser.studio/latest/" class="author-text" target="_blank">Viser</a>!</p>
+            
         </div>
 
         <div class="section base-row add-top-padding">
@@ -376,9 +387,10 @@
             <p class="tldr"><b>Robot Execution</b></p>
             <div class="separator"></div>
             <p class='paragraph'>RSRD detects human hands with <a class="author-text" href="https://geopavlakos.github.io/hamer/">HaMeR</a> 
-                and aligns them with the 4D reconstruction. Importantly, RSRD only uses hands as a <b>soft cue</b> to
+                and aligns them with the 4D reconstruction. RSRD only uses hands as a <b>soft cue</b> to
                  bias grasp planning towards parts touched by the human, and can deviate from this if kinematically required.</p>
             <img src="data/rsrd_hands.jpg" style="max-width: 90%" />
+            <p class="paragraph">RSRD plans bimanual motions to grasp and manipulate parts in a pose-agnostic way, allowing it to adapt to any kinematically</p>
          </div>
 
 
