@@ -31,12 +31,14 @@ const videoIds = ['bear_video', 'nerfgun_video', 'redbox_video', 'scissors_video
 function showIframe(iframeId) {
   iframeIds.forEach(id => {
     const iframe = document.getElementById(id);
-    console.log(iframe);
+    // console.log(iframe);
     if (iframe) {
       if (id === iframeId) {
         iframe.classList.add('show');
+        iframe.src = $(iframe).data('src');
       } else {
         iframe.classList.remove('show');
+        iframe.src = "";
       }
     }
   });
