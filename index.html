@@ -418,7 +418,7 @@
                     <li>
                         <b>Hand-Guided Part Selection</b>:
                         From the 4D motion reconstruction, RSRD must automatically detect which parts need to be manipulated to reproduce it.
-                        Not all moving parts are relevant (e.g., the wooden figurine's hand).
+                        Not all moving parts are relevant, like the wooden figurine's hand.
                         We use hand position as prior for part selection (using <a class="author-text" href="https://geopavlakos.github.io/hamer/">HaMeR</a>),
                         but <i>do not</i> use the hand contact points, as explained in (2).
                         <img src="data/rsrd_hands.jpg" style="max-width: 90%" />
@@ -426,10 +426,8 @@
                     <li>
                         <b>Part-centric Grasps</b>: 
                         We cannot use detected finger contact locations as grasp points, as they may either jitter or become kinematically unreachable.
-                        Also, humans may perform actions not feasible by a robot (e.g., prehensile motions, wide grasps), whereas
-                        a robot must remain rigidly attached to the object part during the entire motion.
-                        <!-- To ensure that the grasp is invariant to part pose, we define grasps axes in part frame,
-                        which also gives us an extra degree of freedom around which the gripper can rotate. -->
+                        Also, a robot must remain rigidly attached to the object part during the entire motion, whileas
+                        humans can do so much more &mdash; change contact points by shuffling fingers, or do prehensile motions.
                         <div class="video-container" style="max-width: 600px;">
                             <div class="video-item">
                                 <video autoplay muted loop playsinline>
@@ -443,10 +441,10 @@
                         <b>Bimanual Robot Pose Optimization</b>:
                         We exhaustively search for collision-free, kinematically feasible robot trajectories: we first use
                         <a href="https://github.com/brentyi/jaxls" class="author-text" target="_blank">jaxls</a>
-                        to optimize a robot trajectory to fit the robot end-effector waypoints using a Levenberg-Marquardt solver,
-                        and then
+                        to optimize a robot trajectory to fit the robot end-effector waypoints using a Levenberg-Marquardt solver.
+                        Then, we use
                         <a href="https://curobo.org/" class="author-text" target="_blank">cuRobo</a>
-                        to plan collision-free robot approach and retreat motions, and for all collision avoidance checks.
+                        to plan collision-free robot approach motions and for all collision avoidance checks.
                         <br>
                         Below we vary the object pose, and visualize below some bimanual IK solutions for each object motion.
                         <div class="video-container">
