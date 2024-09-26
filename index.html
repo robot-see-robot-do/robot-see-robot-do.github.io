@@ -154,16 +154,30 @@
         </div>
 
         <div class="section base-row add-top-padding">
-            
             <h1 class="tldr">
                 Humans imitate manipulation by watching <b>object</b> motion, not <b>hand</b> motion. RSRD does the same. <br>
-                This enables imitation from a single video robust to orientation and across morphologies
+                This enables imitation from a single video robust to orientation and across embodiments.
             </h1>
             <img src="data/rsrd_mainfig.jpg" style="max-width: 100%" />
+        </div>
+
+        <div class="section add-top-padding">
+            <div class="base-row">
+                <img src="data/favicon.png" style="height: 40px; margin-left: 5px; margin-right: 5px; margin-top: 40px; margin-bottom: 40px;">
+                <img src="data/favicon.png" style="height: 40px; margin-left: 5px; margin-right: 5px; margin-top: 40px; margin-bottom: 40px;">
+                <img src="data/favicon.png" style="height: 40px; margin-left: 5px; margin-right: 5px; margin-top: 40px; margin-bottom: 40px;">
+            </div>
+        </div>
+
+        <div class="section base-row add-top-padding">
+            
+
             <h1>4D Part Reconstruction</h1>
             <p class="paragraph">
                 RSRD takes in <b>1) </b>a multi-view object scan and <b>2)</b> a monocular demonstration video.
-                These smartphone-captured inputs are used to generate these 4D reconstructions: 
+                By creating part-aware 3D representations using <a href="https://www.garfield.studio/" class="author-text" target="_blank">GARField</a> (parts, toggle for clusters) and 
+                <a href="https://github.com/facebookresearch/dinov2" class="author-text"target="_blank">DINOv2</a> (tracking SE3 pose),
+                these smartphone-captured inputs can generate these 4D reconstructions:
             </p>
             
             
@@ -173,47 +187,47 @@
                 <div class="carousel-container" id="videoCarousel">
                     <!-- Add your video elements here -->
                     <div class="carousel-item" id="bear_video">
-                        <video autoplay muted loop playsinline>
+                        <video autoplay muted loop playsinline height="400px">
                             <source src="data/demo_vids/cal_bear_naked_wave.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="carousel-item" id="nerfgun_video">
-                        <video autoplay muted loop playsinline>
+                        <video autoplay muted loop playsinline height="400px">
                             <source src="data/demo_vids/nerfgun_final.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="carousel-item" id="redbox_video">
-                        <video autoplay muted loop playsinline>
+                        <video autoplay muted loop playsinline height="400px">
                             <source src="data/demo_vids/buddha_empty_close.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="carousel-item" id="scissors_video">
-                        <video autoplay muted loop playsinline>
+                        <video autoplay muted loop playsinline height="400px">
                             <source src="data/demo_vids/scissors2.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="carousel-item" id="sunglasses_video">
-                        <video autoplay muted loop playsinline>
+                        <video autoplay muted loop playsinline height="400px">
                             <source src="data/demo_vids/sunglasses_fold.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="carousel-item" id="ledlight_video">
-                        <video autoplay muted loop playsinline>
+                        <video autoplay muted loop playsinline height="400px">
                             <source src="data/demo_vids/led_light_unfold3.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="carousel-item" id="stapler_video">
-                        <video autoplay muted loop playsinline>
+                        <video autoplay muted loop playsinline height="400px">
                             <source src="data/demo_vids/stapler_fold.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="carousel-item" id="wirecutters_video">
-                        <video autoplay muted loop playsinline>
+                        <video autoplay muted loop playsinline height="400px">
                             <source src="data/demo_vids/wire_cutters_close2.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="carousel-item" id="usbplug_video">
-                        <video autoplay muted loop playsinline>
+                        <video autoplay muted loop playsinline height="400px">
                             <source src="data/demo_vids/usb_plug_unplug3.mp4" type="video/mp4">
                         </video>
                     </div>
@@ -303,11 +317,19 @@
             
         </div>
 
+        <div class="section add-top-padding">
+            <div class="base-row">
+                <img src="data/favicon.png" style="height: 40px; margin-left: 5px; margin-right: 5px; margin-top: 40px; margin-bottom: 40px;">
+                <img src="data/favicon.png" style="height: 40px; margin-left: 5px; margin-right: 5px; margin-top: 40px; margin-bottom: 40px;">
+                <img src="data/favicon.png" style="height: 40px; margin-left: 5px; margin-right: 5px; margin-top: 40px; margin-bottom: 40px;">
+            </div>
+        </div>
+
         <div class="section base-row add-top-padding">
-            <h1>Robot Demonstration Re-Mapping</h1>
             <p class="paragraph">
                 After recovering 3D part motion, RSRD plans grasps and robot motions to reproduce the 4D reconstructions
             </p>
+
             <div class="video-container">
                 <div class="video-item" style="overflow: hidden;">
                     <video autoplay muted loop playsinline style="transform: scale(1.7);transform-origin: center center;">
@@ -363,10 +385,11 @@
         <!-- Just for vertical spacing... -->
         <div class="section add-top-padding">
             <div class="base-row">
-                <img src="data/favicon.png" style="height: 20px; margin-left: 5px; margin-right: 5px; margin-top: 40px; margin-bottom: 40px;">
-                <img src="data/favicon.png" style="height: 20px; margin-left: 5px; margin-right: 5px; margin-top: 40px; margin-bottom: 40px;">
-                <img src="data/favicon.png" style="height: 20px; margin-left: 5px; margin-right: 5px; margin-top: 40px; margin-bottom: 40px;">
+                <img src="data/favicon.png" style="height: 40px; margin-left: 5px; margin-right: 5px; margin-top: 40px; margin-bottom: 40px;">
+                <img src="data/favicon.png" style="height: 40px; margin-left: 5px; margin-right: 5px; margin-top: 40px; margin-bottom: 40px;">
+                <img src="data/favicon.png" style="height: 40px; margin-left: 5px; margin-right: 5px; margin-top: 40px; margin-bottom: 40px;">
             </div>
+        </div>
          </div>
          <div class="section base-row add-top-padding">
             <h1>How it works</h1>
@@ -382,38 +405,74 @@
                 Because 4D-DPM uses gradient descent, any differentiable prior is easily incorporated like temporal smoothness and rigidity.
             </p>
             <img src="data/4ddpm_ablation.jpg" style="max-width: 90%" />
-
-            <p class="tldr"><b>Robot Execution</b></p>
-            <div class="separator"></div>
-            <p class='paragraph'>RSRD detects human hands with <a class="author-text" href="https://geopavlakos.github.io/hamer/">HaMeR</a> 
-                and aligns them with the 4D reconstruction. RSRD only uses hands as a <b>soft cue</b> to
-                 bias grasp planning towards parts touched by the human, and can deviate from this if kinematically required.</p>
-            <img src="data/rsrd_hands.jpg" style="max-width: 90%" />
-            <p class="paragraph">RSRD plans in a pose-agnostic way, allowing it to adapt to:</p>
-            <div class="video-container">
-                <div class="video-item">
-                    <p><b>Varying grasp candidates</b></p>
-                    <video autoplay muted loop playsinline>
-                        <source src="data/nerfgun_graspsearch.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="video-item">
-                    <p><b>Varying object pose</b></p>
-                    <video autoplay muted loop playsinline>
-                        <source src="data/nerfgun_posevary.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="video-item">
-                    <p><b>Varying object pose</b></p>
-                    <video autoplay muted loop playsinline>
-                        <source src="data/bear_posevary.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
          </div>
+
+        <div class="section base-row add-top-padding">
+            <h1>Retargeting Robot Trajectory</h1>
+            <p class="paragraph">
+                With the recovered 3D part motion and the object placed in the robot workspace,
+                RSRD now can <i>do</i> the motion demonstrated in the video.
+                Motions can be retargeted regardless of object pose!
+                Three main takeaways are:
+                <ol class="paragraph">
+                    <li>
+                        <b>Hand-Guided Part Selection</b>:
+                        From the 4D motion reconstruction, RSRD must automatically detect which parts need to be manipulated to reproduce it.
+                        Not all moving parts are relevant (e.g., the wooden figurine's hand).
+                        We use hand position as prior for part selection (using <a class="author-text" href="https://geopavlakos.github.io/hamer/">HaMeR</a>),
+                        but <i>do not</i> use the hand contact points, as explained in (2).
+                        <img src="data/rsrd_hands.jpg" style="max-width: 90%" />
+                    </li><br>
+                    <li>
+                        <b>Part-centric Grasps</b>: 
+                        We cannot use detected finger contact locations as grasp points, as they may either jitter or become kinematically unreachable.
+                        Also, humans may perform actions not feasible by a robot (e.g., prehensile motions, wide grasps), whereas
+                        a robot must remain rigidly attached to the object part during the entire motion.
+                        <!-- To ensure that the grasp is invariant to part pose, we define grasps axes in part frame,
+                        which also gives us an extra degree of freedom around which the gripper can rotate. -->
+                        <div class="video-container" style="max-width: 600px;">
+                            <div class="video-item">
+                                <video autoplay muted loop playsinline>
+                                    <source src="data/nerfgun_graspsearch.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </li><br>
+                    <li>
+                        <b>Bimanual Robot Pose Optimization</b>:
+                        We exhaustively search for collision-free, kinematically feasible robot trajectories: we first use
+                        <a href="https://github.com/brentyi/jaxls" class="author-text" target="_blank">jaxls</a>
+                        to optimize a robot trajectory to fit the robot end-effector waypoints using a Levenberg-Marquardt solver,
+                        and then
+                        <a href="https://curobo.org/" class="author-text" target="_blank">cuRobo</a>
+                        to plan collision-free robot approach and retreat motions, and for all collision avoidance checks.
+                        <br>
+                        Below we vary the object pose, and visualize below some bimanual IK solutions for each object motion.
+                        <div class="video-container">
+                            <div class="video-item">
+                                <video autoplay muted loop playsinline>
+                                    <source src="data/nerfgun_posevary.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="video-item">
+                                <video autoplay muted loop playsinline>
+                                    <source src="data/bear_posevary.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div class="video-item">
+                                <video autoplay muted loop playsinline>
+                                    <source src="data/scissors_posevary.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </p>
+        </div>
 
 
         <div class="section citation add-top-padding">
