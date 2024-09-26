@@ -330,7 +330,22 @@
                 After recovering 3D part motion, RSRD plans grasps and robot motions to reproduce the 4D reconstructions
             </p>
 
-            <div class="video-container">
+            <div id="iframe-container" class="iframe-container">
+                <div class="click-and-move-overlay">
+                    <h1 class="tldr">
+                        <b>
+                            <img src="data/drag_icon.png" alt="" class="inline-image">
+                            Click and move me!
+                            <img src="data/drag_icon.png" alt="" class="inline-image">
+                        </b>
+                    </h1>
+                </div>
+                <iframe class="iframe show"
+                    src="https://rsrd-anonymous.github.io/build/?playbackPath=https://rsrd-anonymous.github.io/recordings/robot_bear.viser&initDistanceScale=1.5&gaussianGroupColorShuffleSeed=1"
+                ></iframe>
+            </div>
+
+            <!-- <div class="video-container">
                 <div class="video-item" style="overflow: hidden;">
                     <video autoplay muted loop playsinline style="transform: scale(1.7);transform-origin: center center;">
                         <source src="data/bear_mp_crop.mp4" type="video/mp4" >
@@ -343,7 +358,7 @@
                         Your browser does not support the video tag.
                     </video>
                 </div>
-            </div>
+            </div> -->
             <p class="paragraph">
                 These can be physically executed on a real robot to produce the demonstrated motion:
             </p>
