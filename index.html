@@ -284,7 +284,7 @@
                         data-src="https://rsrd-anonymous.github.io/build/?playbackPath=https://rsrd-anonymous.github.io/recordings/wirecutters.viser&initDistanceScale=1.4&gaussianGroupColorShuffleSeed=9"
                     ></iframe>
                 </div>
-                <div>
+                <div style="position: relative; display: flex;">
                     <button class="results-slide-arrow" id="results-slide-arrow-prev" onclick="results_slide_left()">
                         &#8249;
                     </button>
@@ -339,43 +339,51 @@
             <p class="paragraph">
                 These can be physically executed on a real robot to produce the demonstrated motion:
             </p>
-            <div class="video-scroll">
-                <div class="video-scroll-card">
-                    <video autoplay muted loop playsinline>
-                        <source src="data/bear_robot_1_trimmed.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+            <div style="position: relative; display: flex;">
+                <button class="results-slide-arrow" id="results-slide-arrow-prev" onclick="vid_slide_left()">
+                    &#8249;
+                </button>
+                <div class="video-scroll" id="result-video-scroll">
+                    <div class="video-scroll-card">
+                        <video autoplay muted loop playsinline>
+                            <source src="data/bear_robot_1_trimmed.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-scroll-card">
+                        <video autoplay muted loop playsinline>
+                            <source src="data/nerfgun_robot_1_trimmed.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-scroll-card">
+                        <video autoplay muted loop playsinline>
+                            <source src="data/scissors_white_out.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-scroll-card">
+                        <video autoplay muted loop playsinline>
+                            <source src="data/scissors_red_out.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-scroll-card">
+                        <video autoplay muted loop playsinline>
+                            <source src="data/red_box_out.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-scroll-card">
+                        <video autoplay muted loop playsinline>
+                            <source src="data/sunglasses_out.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
-                <div class="video-scroll-card">
-                    <video autoplay muted loop playsinline>
-                        <source src="data/nerfgun_robot_1_trimmed.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="video-scroll-card">
-                    <video autoplay muted loop playsinline>
-                        <source src="data/scissors_white_out.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="video-scroll-card">
-                    <video autoplay muted loop playsinline>
-                        <source src="data/scissors_red_out.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="video-scroll-card">
-                    <video autoplay muted loop playsinline>
-                        <source src="data/red_box_out.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="video-scroll-card">
-                    <video autoplay muted loop playsinline>
-                        <source src="data/sunglasses_out.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+                <button class="results-slide-arrow" id="results-slide-arrow-next" onclick="vid_slide_right()">
+                    &#8250;
+                </button>
             </div>
             <p class="paragraph">
                 RSRD's visual imitation is <b>object-centric</b>, allowing it to adapt to <em>different</em> object orientations with the <em>same</em> demo:

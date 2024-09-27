@@ -86,3 +86,11 @@ function initializePage() {
 }
 // Run initialization when the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', initializePage);
+
+// // Get event listener for when window resized
+// window.addEventListener('resize', () => {
+//   // Resize the video arrows to be in the right place.
+//   const prev_arr = document.getElementById('vid-slide-arrow-prev');
+//   const next_arr = document.getElementById('vid-slide-arrow-next');
+//   console.log("foo", prev_arr.style);
+// });
