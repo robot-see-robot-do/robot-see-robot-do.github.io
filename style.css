@@ -1022,3 +1022,31 @@ input:checked + .slider:before {
   input[type="radio"] {
     vertical-align: middle;
   }
+
+  .video-scroll {
+    height: 300px;
+    max-width: 940px;
+    margin: 0 auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    /* padding: 10px; */
+}
+
+.video-scroll-card {
+    display: inline-block;
+    object-fit: cover;
+    flex: 1;
+    max-width: 50%;
+}
+
+.video-scroll-card video{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* .video-scroll-card img {
+    width: 100%;
+    cursor: pointer;
+} */
