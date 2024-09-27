@@ -478,6 +478,74 @@
                     </li>
                 </ol>
             </p>
+            <h1>Limitations and Failures</h1>
+            <p class="paragraph">
+                <b>Camera Angle Sensitivity:</b> Since RSRD uses only a single video, it can be sensitive to camera pose during the demonstration, as illustrated in the tracking failure below. 
+                The same scan of the laptop can work or fail depending on the camera angle.
+            </p>
+            <div class="video-container">
+                <div class="video-item">
+                    <video autoplay muted loop playsinline>
+                        <source src="data/laptop_trackfail.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-item">
+                    <video autoplay muted loop playsinline>
+                        <source src="data/laptop_tracksucc.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <p class="paragraph">
+                <b>Difficulty with feature-less parts:</b> 4D-DPM can struggle with parts which look similar from multiple angles, or have
+                not enough visual features for DINO to pick up on. In these videos the tail of the plushie and cable of the charger rotate along their major axis, making robot
+                execution difficult.
+            </p>
+                <div class="video-container">
+                    <div class="video-item">
+                        <video autoplay muted loop playsinline>
+                            <source src="data/garfield_tailrotate.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-item">
+                        <video autoplay muted loop playsinline>
+                            <source src="data/mac_charger_cablerotate.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            <p class="paragraph">
+                <b>Poor segmentation or reconstruction</b>: If the object scan is poor, or the part segmentation is incomplete or severely over-segmented,
+                4D-DPM can be unstable and lead to catastrophic failure like below. 
+            </p>
+            <div class="video-container">
+                <div class="video-item">
+                    <video autoplay muted loop playsinline>
+                        <source src="data/mac_charger_catastrophic.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <p class="paragraph">
+                <b>Hand occlusions</b>: hand occlusions can interfere with part motion recovery, such as with the leg of this sculpture
+            </p>
+            <div class="video-container">
+                <div class="video-item">
+                    <video autoplay muted loop playsinline>
+                        <source src="data/hand_occ.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <p class="paragraph">
+                <b>Initial configuration assumption</b>: RSRD assumes the initial state of the object is the same as the demonstrated video, meaning it cannot adapt to new initial configurations of the object.
+            </p>
+                
+            <p class="paragraph">
+                <b>Only one video input</b>: RSRD as designed cannot scale to multiple demonstration videos of the same object, it can only mimick motion from one video.
+            </p>
         </div>
 
 
