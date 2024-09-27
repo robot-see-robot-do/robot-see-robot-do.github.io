@@ -398,11 +398,13 @@ display: none;
 .results-slide-row {
     display: flex;
     overflow-x: scroll;
+    overflow-y: hidden;
     scroll-behavior: smooth;
     height: 141px;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 10px;
 }
 
 .results-slide-col {
@@ -460,10 +462,11 @@ display: none;
     outline: none;
     background-color: #fff;
     border-radius: 10px;
+    opacity: 0.6;
 }
 
 .thumbnail-btn:hover   {
-    background-color: #eaeaea;
+    opacity: 1.0;
 }
 
 .thumbnail_label {

@@ -60,22 +60,57 @@ function showVideo(videoId) {
   });
 }
 
+let currentThumbnail = 0;
+let thumbnailFromIndex = {}
+let thumbnailCount = 0;
+
 // Function to set up thumbnail click events
 function setupThumbnailClickEvents() {
-  const thumbnails = document.querySelectorAll('.thumbnail-btn');
-  thumbnails.forEach(thumbnail => {
-    thumbnail.addEventListener('click', function() {
-      const iframeId = this.id.replace('-thumb', '');
+  $('.thumbnail-btn').each((index, thumbnail) => {
+    thumbnailCount += 1;
+    thumbnailFromIndex[index] = thumbnail;
+    $(thumbnail).click(function() {
+      const buttonId = $(thumbnail).attr('id');
+      if (buttonId === undefined) return;
+      const iframeId = buttonId.replace('-thumb', '');
+
+      currentThumbnail = index;
+      $('.thumbnail-btn').css('opacity', '');
+      $(thumbnail).css('opacity', '1.0');
       showIframe(iframeId);
       showVideo(iframeId + '_video');
     });
   });
+
+  $(thumbnailFromIndex[0]).click();
 }
+
+// For main results object carousel -- left/right arrow clicks to navigate
+function results_slide_left() {
+  slider_window = document.getElementById('results-objs-scroll');
+  const newIndex = ((currentThumbnail - 1 + thumbnailCount) % thumbnailCount);
+  const newThumbnail = thumbnailFromIndex[newIndex];
+  $(newThumbnail).click();
+
+  // Make sure the new thumbnail is visible.
+  slider_window.scrollLeft = newThumbnail.offsetLeft - slider_window.offsetWidth / 2;
+}
+function results_slide_right() {
+  slider_window = document.getElementById('results-objs-scroll');
+  const newIndex = (currentThumbnail + 1) % thumbnailCount;
+  const newThumbnail = thumbnailFromIndex[newIndex];
+  $(newThumbnail).click();
+
+  // Make sure the new thumbnail is visible.
+  slider_window.scrollLeft = newThumbnail.offsetLeft - slider_window.offsetWidth / 2;
+}
+
+
 
 // Initialize the page
 function initializePage() {
   setupThumbnailClickEvents();
-  
+
   // Show the first iframe by default
   if (iframeIds.length > 0) {
     showIframe(iframeIds[0]);
