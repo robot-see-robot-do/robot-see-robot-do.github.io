@@ -79,6 +79,10 @@ function setupThumbnailClickEvents() {
       $(thumbnail).css('opacity', '1.0');
       showIframe(iframeId);
       showVideo(iframeId + '_video');
+
+      // Make sure the new thumbnail is visible.
+      const slider_window = document.getElementById('results-objs-scroll');
+      slider_window.scrollLeft = thumbnail.offsetLeft - slider_window.offsetWidth / 2;
     });
   });
 
@@ -87,22 +91,14 @@ function setupThumbnailClickEvents() {
 
 // For main results object carousel -- left/right arrow clicks to navigate
 function results_slide_left() {
-  slider_window = document.getElementById('results-objs-scroll');
   const newIndex = ((currentThumbnail - 1 + thumbnailCount) % thumbnailCount);
   const newThumbnail = thumbnailFromIndex[newIndex];
   $(newThumbnail).click();
-
-  // Make sure the new thumbnail is visible.
-  slider_window.scrollLeft = newThumbnail.offsetLeft - slider_window.offsetWidth / 2;
 }
 function results_slide_right() {
-  slider_window = document.getElementById('results-objs-scroll');
   const newIndex = (currentThumbnail + 1) % thumbnailCount;
   const newThumbnail = thumbnailFromIndex[newIndex];
   $(newThumbnail).click();
-
-  // Make sure the new thumbnail is visible.
-  slider_window.scrollLeft = newThumbnail.offsetLeft - slider_window.offsetWidth / 2;
 }
 
 
