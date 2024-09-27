@@ -113,6 +113,11 @@ display: none;
     overflow: hidden;
     margin: 10px auto; /* Center the container and add vertical space */
 }
+@media (max-width: 768px) {
+    .iframe-container {
+        height: 400px;
+    }
+}
 
 .iframe-container .iframe {
     position: absolute;
@@ -188,6 +193,8 @@ display: none;
     font-size: 16px;
     font-weight: 400;
     text-decoration: none;
+    text-wrap: nowrap;
+    line-height: 32px;
 }
 
 .text-star {
