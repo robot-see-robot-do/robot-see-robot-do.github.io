@@ -478,7 +478,23 @@
                     </li>
                 </ol>
             </p>
+            </div>
+            <!-- Just for vertical spacing... -->
+        <div class="section add-top-padding">
+            <div class="base-row">
+                <img src="data/favicon.png" style="height: 40px; margin-left: 5px; margin-right: 5px; margin-top: 40px; margin-bottom: 40px;">
+                <img src="data/favicon.png" style="height: 40px; margin-left: 5px; margin-right: 5px; margin-top: 40px; margin-bottom: 40px;">
+                <img src="data/favicon.png" style="height: 40px; margin-left: 5px; margin-right: 5px; margin-top: 40px; margin-bottom: 40px;">
+            </div>
+        </div>
+        <div class="section base-row add-top-padding">
             <h1>Limitations and Failures</h1>
+            <p class="paragraph">
+                4D monocular reconstruction is an extremely under-constrained and challenging problem, and 4D-DPM still suffers from sensitivity to demonstration viewpoint, occlusions, reconstruction quality, and more.
+                It also requires some hyper-parameter tuning of regularizers like the ARAP loss, and can frustratingly fail due to incorrect or incomplete part segmentations. More work is needed to adapt the approach for more in-the-wild videos.
+                In addition, while we show how the 4D reconstruction enables a robot to imitate with motion planning, RSRD as designed cannot scale to multiple demonstration videos of the same object, it can only mimick motion from one video. 
+                Learning to manipulate from more demonstrations is an exciting future direction!
+            </p>
             <p class="paragraph">
                 <b>Camera Angle Sensitivity:</b> Since RSRD uses only a single video, it can be sensitive to camera pose during the demonstration, as illustrated in the tracking failure below. 
                 The same scan of the laptop can work or fail depending on the camera angle.
@@ -541,10 +557,6 @@
             </div>
             <p class="paragraph">
                 <b>Initial configuration assumption</b>: RSRD assumes the initial state of the object is the same as the demonstrated video, meaning it cannot adapt to new initial configurations of the object.
-            </p>
-                
-            <p class="paragraph">
-                <b>Only one video input</b>: RSRD as designed cannot scale to multiple demonstration videos of the same object, it can only mimick motion from one video.
             </p>
         </div>
 
