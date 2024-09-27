@@ -535,7 +535,7 @@
                 4D monocular reconstruction is an extremely under-constrained and challenging problem, and 4D-DPM still suffers from sensitivity to demonstration viewpoint, occlusions, reconstruction quality, and more.
                 It also requires some hyper-parameter tuning of regularizers like the ARAP loss, and can frustratingly fail due to incorrect or incomplete part segmentations. More work is needed to adapt the approach for more in-the-wild videos.
                 In addition, while we show how the 4D reconstruction enables a robot to imitate with motion planning, RSRD as designed cannot scale to multiple demonstration videos of the same object, it can only mimick motion from one video. 
-                Learning to manipulate from more demonstrations is an exciting future direction!
+                Learning to manipulate from more demonstrations, perhaps with policy learning, is an exciting future direction!
             </p>
             <p class="paragraph">
                 <b>Camera Angle Sensitivity:</b> Since RSRD uses only a single video, it can be sensitive to camera pose during the demonstration, as illustrated in the tracking failure below. 
@@ -597,9 +597,6 @@
                     </video>
                 </div>
             </div>
-            <p class="paragraph">
-                <b>Initial configuration assumption</b>: RSRD assumes the initial state of the object is the same as the demonstrated video, meaning it cannot adapt to new initial configurations of the object.
-            </p>
         </div>
 
 
