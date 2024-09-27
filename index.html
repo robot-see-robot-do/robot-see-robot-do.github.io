@@ -319,8 +319,9 @@
         </div>
 
         <div class="section base-row add-top-padding">
+            <h1>Robot Motion Retargeting</h1>
             <p class="paragraph">
-                After recovering 3D part motion, RSRD optimizes grasps and robot motions to reproduce the 4D reconstructions
+                After recovering 3D part motion, RSRD optimizes grasps and robot motions to reproduce the 4D reconstructions.
             </p>
 
             <div id="iframe-container" class="iframe-container">
@@ -337,34 +338,43 @@
                     src="https://rsrd-anonymous.github.io/build/?playbackPath=https://rsrd-anonymous.github.io/recordings/robot_bear.viser&initDistanceScale=1.5&gaussianGroupColorShuffleSeed=1"
                 ></iframe>
             </div>
-
-            <!-- <div class="video-container">
-                <div class="video-item" style="overflow: hidden;">
-                    <video autoplay muted loop playsinline style="transform: scale(1.7);transform-origin: center center;">
-                        <source src="data/bear_mp_crop.mp4" type="video/mp4" >
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="video-item" style="overflow: hidden;">
-                    <video autoplay muted loop playsinline style="transform: scale(1.5);transform-origin: center center;">
-                        <source src="data/nerfgun_mp_crop.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div> -->
             <p class="paragraph">
                 These can be physically executed on a real robot to produce the demonstrated motion:
             </p>
-            <div class="video-container">
-                <div class="video-item">
+            <div class="video-scroll">
+                <div class="video-scroll-card">
                     <video autoplay muted loop playsinline>
                         <source src="data/bear_robot_1_trimmed.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <div class="video-item">
+                <div class="video-scroll-card">
                     <video autoplay muted loop playsinline>
                         <source src="data/nerfgun_robot_1_trimmed.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-scroll-card">
+                    <video autoplay muted loop playsinline>
+                        <source src="data/scissors_white_out.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-scroll-card">
+                    <video autoplay muted loop playsinline>
+                        <source src="data/scissors_red_out.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-scroll-card">
+                    <video autoplay muted loop playsinline>
+                        <source src="data/red_box_out.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video-scroll-card">
+                    <video autoplay muted loop playsinline>
+                        <source src="data/sunglasses_out.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -373,9 +383,32 @@
                 RSRD's visual imitation is <b>object-centric</b>, allowing it to adapt to <em>different</em> object orientations with the <em>same</em> demo:
                 <div class="video-container">
                     <div class="video-item">
+                        <p><b>0 degrees rotated</b></p>
+                        <video autoplay muted loop playsinline>
+                            <source src="data/bear_robot_1_trimmed.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-item">
                         <p><b>180 degrees rotated</b></p>
                         <video autoplay muted loop playsinline>
                             <source src="data/bear_robot_2_trimmed.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <div class="video-item">
+                        <p><b>0 degrees rotated</b></p>
+                        <video autoplay muted loop playsinline>
+                            <source src="data/nerfgun_straight_out.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-item">
+                        <p><b>30 degrees rotated</b></p>
+                        <video autoplay muted loop playsinline>
+                            <source src="data/nerfgun_half_turned_out.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
